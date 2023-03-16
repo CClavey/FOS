@@ -22,8 +22,13 @@
 		<li class="menu-item"><a href="contact.php" class="drp">Contact Us</a>
 		</li>
 		
-		<li class="menu-item"><a href="account.php" class="drp">Account</a>
+		<li class="menu-item"><a href="#" id="target" onclick="setUser()" class="drp">Account</a>
 		</li>
+		<script>
+			function setUser() {
+				document.getElementById('target').href = "account.php?user=" + localStorage.getItem('email');
+			}
+		</script>
 		
 		<li class="menu-item"><?php include ("cart.php");?>
 		</li>
