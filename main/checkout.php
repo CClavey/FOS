@@ -32,7 +32,7 @@
 						<h4>Card Number&ensp;&ensp;&ensp;<input type="text" name="card" id="card" value = ""/></h4>
 						<h4>Expiration&ensp;&ensp;&ensp;<input type="date" name="exp" id="exp" value = ""/></h4>
 						<h4>CVC&ensp;&ensp;&ensp;<input type="text" name="cvc" id="cvc" value = ""/></h4>
-						<h4>Checkout&ensp;&ensp;&ensp;<a href = "checkoutProcess.php" class = "drp"><input type = "submit" name = "Submit" id = "Submit"></a></h4>
+						<h4>Checkout&ensp;&ensp;&ensp;<input type="submit" value="Submit"></h4>
 					</td>
 				</tr>
 				<tr>
