@@ -2,6 +2,7 @@
 <header>
 <?php include ("header.php") ?>
 <?php //Turn menu into its own page and then include it into the order to save time?>
+<!Add a cool updating delivery status bar on a timer if possible>
 <link rel="stylesheet" href="CSS/styles.css">
 <script src="scripts.js"></script>
 </header>
