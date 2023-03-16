@@ -19,6 +19,9 @@ $result = $connect->query($sql);
 if($result == FALSE){
 	echo "error:".$connect->error;
 } else {
-	echo "<br><br><br><center>User successfully added</center>";
+	echo "<br><br><br><center>User successfully added</center>
+	<script>
+	localStorage.setItem('email', '$emailID');
+	</script>";
 }
 ?>
