@@ -15,15 +15,25 @@
 			</tr>
 			<tr>
 				<td colspan="2" class = "tdMain">
-					
 					<h1>Account Details</h1>
 					<br>
-					<h3>Name: ClaveyC</h3>
-					<h3>Email: ClaveyC@jbu.com</h3>
-					<h3>Birthday: </h3>
-					<h3>Gender: Male</h3>
-					<h3>Points? (Only included if we do points rather than coupons)</h3>
-					<br>
+					
+					<?php
+						include("fos-db-connection.php");
+
+						$emailID = $_GET['user'];
+
+						$sql = "SELECT * FROM users_tab WHERE emailID = '".$emailID."'"; //this is susceptible to SQL injection, but i forgot how to do safe queries
+						$result = $connect->query($sql);
+						$row = $result->fetch_assoc();
+						
+						echo "<h3>Name: ".$row['firstname']." ".$row['lastname']."</h3>
+							<h3>Email: ".$emailID."</h3>
+							<h3>Birthday: ".$row['dob']."</h3>
+							<h3>Gender: ".$row['gender']."</h3>
+							<h3>Points? (Only included if we do points rather than coupons)</h3>
+							<br>";
+					?>
 					<center>
 						<a href = "accountDetails.php" class = "drp"><button name = "editDetails" id = "editDetails">Edit Account Info</button></a>
 					</center>
