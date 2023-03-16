@@ -1,37 +1,31 @@
 <html>
 <header>
-<?php 
-	include ("header.php")
-?>
-<link rel="stylesheet" href="CSS/styles.css">
-<script src="scripts.js"></script>
+	<?php include ("header.php") ?>
+	<link rel="stylesheet" href="CSS/styles.css">
+	<script src="JS/scripts.js"></script>
 </header>
-
 <body>
-<center>
-	<a href = "home.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;" name = "return" id = "return">Return</button></a>
+	<form name="login-form" method="POST" action="loginProcess.php" >
+		<table border="1" align="center">
+			<tr>
+				<td>Enter your Email ID</td>
+				<td><input type="text" name="emailID" id="emailID" value = ""/></td>
+			</tr>
+			<tr>
+				<td>Enter your Password</td>
+				<td><input type="text" name="pwd" id="pwd" value = ""/><a id="pwdReset" href="#">Forgot Your Password?</a></td>
+			</tr>
+			<tr style="height:40px;">
+				<td align="center"><button name = "reset" id = "reset" onclick = "reset()">Reset</button></td>
+				<td align="center"><input type="submit" value="Login"></td>
+			</tr>
+		</table>
+		<?php
+			if($_GET['login'] == 'fail')
+				echo "<center>Email ID or password incorrect, try agian</center>";
+		?>
+	</form>
 
-	<?php
-		include("fos-db-connection.php");
-
-		$emailID = $_POST['emailID'];
-		$password = $_POST['pwd'];
-
-		$sql = "SELECT pwd FROM users_tab WHERE emailID = '".$emailID."'"; //this is susceptible to SQL injection, but i forgot how to do safe queries
-		$result = $connect->query($sql);
-		$pwd = mysqli_fetch_assoc($result);
-
-		if($password == $pwd['pwd']) {
-			echo "<br><br><br><center>Login Successful</center>
-			<script>
-			localStorage.setItem('email', '$emailID');
-			</script>";
-		} else {
-			header("Location: login.php?login=fail");
-			exit();
-		}
-	?>
-
-</center>
 </body>
+
 </html>
