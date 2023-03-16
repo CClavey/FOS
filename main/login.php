@@ -5,22 +5,22 @@
 	<script src="JS/scripts.js"></script>
 </header>
 <body>
-<div class = "loginDIV" id = "loginDIV">
-	<table border="1" align="center" width="17%">
-		<tr>
-			<td>Enter your Email ID</td>
-			<td><input type="text" name="emailID2" id="emailID2" value = ""/></td>
-		</tr>
-		<tr>
-			<td>Enter your Password</td>
-			<td><input type="text" name="pwd" id="pwd" value = ""/></td>
-		</tr>
-		<tr>
-			<td align="center"><h3><button name = "reset" id = "reset" onclick = "reset()">Reset</button><h3></td>
-			<td align="center"><h3><a href = "home.php" class = "drp"><button name = "login" id = "login" onclick = "display()">Login</button></a><h3></td>
-		</tr>
-	</table>
-</div>
+	<form name="login-form" method="POST" action="loginProcess.php" >
+		<table border="1" align="center">
+			<tr>
+				<td>Enter your Email ID</td>
+				<td><input type="text" name="emailID" id="emailID2" value = ""/></td>
+			</tr>
+			<tr>
+				<td>Enter your Password</td>
+				<td><input type="text" name="pwd" id="pwd" value = ""/><a id="pwdReset" href="#">Forgot Your Password?</a></td>
+			</tr>
+			<tr style="height:40px;">
+				<td align="center"><button name = "reset" id = "reset" onclick = "reset()">Reset</button></td>
+				<td align="center"><input type="submit" value="Login"></td>
+			</tr>
+		</table>
+	</form>
 
 </body>
 
