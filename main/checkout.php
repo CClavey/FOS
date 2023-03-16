@@ -18,7 +18,7 @@
 					<td colspan="2" class = "tdMain">
 						<h4>First Name&ensp;&ensp;&ensp;<input type="text" name="firstname" id="firstname" value = ""/></h4>
 						<h4>Last Name&ensp;&ensp;&ensp;<input type="text" name="lastname" id="lastname" value = ""/></h4>
-						<h4>Email Address&ensp;&ensp;&ensp;<input type="text" name="emailID" id="emailID" value = ""/></h4>
+						<h4>Email Address&ensp;&ensp;&ensp;<label for="email"></label> <input type="email" id="emailID" name="emailID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@email.com"></h4>
 						<h4>Country&ensp;&ensp;&ensp;<select id = "country" name = "country" value = "country">
 						<option value = "United States">United States</option>
 						</select></h4>
@@ -29,7 +29,7 @@
 						<option value = "Siloam Springs">Siloam Springs</option>
 						</select></h4>
 						<h4>Zip Code&ensp;&ensp;&ensp;<input type="text" name="zip" id="zip" value = ""/></h4>
-						<h4>Card Number&ensp;&ensp;&ensp;<input type="text" name="card" id="card" value = ""/></h4>
+						<h4>Card Number&ensp;&ensp;&ensp;<input type="tel" name = "card" id = "card" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"></h4>
 						<h4>Expiration&ensp;&ensp;&ensp;<input type="date" name="exp" id="exp" value = ""/></h4>
 						<h4>CVC&ensp;&ensp;&ensp;<input type="text" name="cvc" id="cvc" value = ""/></h4>
 						<h4>Checkout&ensp;&ensp;&ensp;<input type="submit" value="Submit"></h4>
@@ -46,3 +46,4 @@
 </body>
 
 </html>
+
