@@ -30,11 +30,11 @@
 	</tr>
 	<tr>
 		<td> Password</td>
-		<td><input type="text" name="pwd" id="pwd"/></td>
+		<td><input type="password" name="pwd" id="pwd"/></td>
 	</tr>
 	<tr>
 		<td> Confirm Password</td>
-		<td><input type="text" name="confirm" id="confirm"/></td>
+		<td><input type="password" name="confirm" id="confirm"/></td>
 	</tr>
 	<tr style="height:40px;">
 		<td align="center"><button name = "reset" id = "reset" onclick = "reset()">Reset</button></td>
