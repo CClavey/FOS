@@ -13,7 +13,10 @@ $result = $connect->query($sql);
 $pwd = mysqli_fetch_assoc($result);
 
 if($password == $pwd['pwd']) {
-	echo "<br><br><br><center>Login Successful</center>";
+	echo "<br><br><br><center>Login Successful</center>
+	<script>
+	localStorage.setItem('email', '$emailID');
+	</script>";
 } else {
 	header("Location: login.php?login=fail");
 	exit();
