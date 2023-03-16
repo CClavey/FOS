@@ -25,7 +25,7 @@
 							<option value = "Complaint">Complaint</option>
 							<option value = "Customer Support">Customer Support</option>
 						</select></h4>
-						<h4>Feedback&ensp;&ensp;&ensp;<input type="text" style="width:200px;height:300px;" name="feedback" id="feedback" value = ""/></h4>
+						<h4>Feedback&ensp;&ensp;&ensp;<textarea style="width:150px;height:100px;" name="feedback" id="feedback" value = ""></textarea></h4>
 						&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<input type="submit" value="Submit">
 					</td>
 				</tr>
