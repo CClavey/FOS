@@ -26,7 +26,7 @@
 		<td><input type="date" name="dob" id="dob" value = "dob"/></td>
 	</tr>
 		<td> Email ID</td>
-		<td><input type="text" name="emailID" id="emailID"/></td>
+		<td><label for="email"></label> <input type="email" id="emailID" name="emailID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td>
 	</tr>
 	<tr>
 		<td> Password</td>
