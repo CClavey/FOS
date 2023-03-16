@@ -5,7 +5,7 @@
 	<script src="JS/scripts.js"></script>
 </header>
 <body>
-<div class = "signupDIV" id = "signupDIV">
+<form name="signup-form" method="POST" action="signupProcess.php" >
 	<table border="1" align="center" width="15%">
 	<tr>
 		<td> First Name</td>
@@ -30,17 +30,16 @@
 	</tr>
 	<tr>
 		<td> Password</td>
-		<td><input type="text" name="password" id="password"/></td>
+		<td><input type="text" name="pwd" id="pwd"/></td>
 	</tr>
 	<tr>
 		<td> Confirm Password</td>
 		<td><input type="text" name="confirm" id="confirm"/></td>
 	</tr>
-	<tr>
-		<td align="center"><h3><button name = "reset" id = "reset" onclick = "reset()">Reset</button><h3></td>
-		<td align="center"><h3><a href = "home.php" class = "drp"><button name = "signup" id = "signup" onclick = "passwordCheck()">Sign-Up</button></a><h3></td>
+	<tr style="height:40px;">
+		<td align="center"><button name = "reset" id = "reset" onclick = "reset()">Reset</button></td>
+		<td align="center"><input type="submit" value="Signup"></td>
 	</tr>
 	</table>
-</div>
 </body>
 </html>
