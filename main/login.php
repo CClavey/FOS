@@ -9,7 +9,7 @@
 		<table border="1" align="center">
 			<tr>
 				<td>Enter your Email ID</td>
-				<td><input type="text" name="emailID" id="emailID2" value = ""/></td>
+				<td><input type="text" name="emailID" id="emailID" value = ""/></td>
 			</tr>
 			<tr>
 				<td>Enter your Password</td>
@@ -20,6 +20,10 @@
 				<td align="center"><input type="submit" value="Login"></td>
 			</tr>
 		</table>
+		<?php
+			if($_GET['login'] == 'fail')
+				echo "<center>Email ID or password incorrect, try agian</center>";
+		?>
 	</form>
 
 </body>
