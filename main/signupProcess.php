@@ -21,7 +21,7 @@ if($result == FALSE){
 } else {
 	echo "<br><br><br><center>User successfully added</center>
 	<script>
-	localStorage.setItem('email', '".$emailID."');
+	localStorage.setItem('email', '$emailID');
 	</script>";
 }
 ?>
