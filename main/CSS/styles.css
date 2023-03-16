@@ -30,6 +30,11 @@ Black: #003049
 	display:none;
 }
 
+#pwdReset
+{
+  font-size: 10px;
+}
+
 #imageButton
 {
 	padding: 0;
