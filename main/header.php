@@ -1,7 +1,7 @@
 <html>
 <header>
 <link rel = "styleSheet" href = "CSS/styles.css">
-<script src = "scripts.js">
+<script src = "JS/scripts.js">
 </script>
 <?php $cartFunction = 100000?>
 <center>
