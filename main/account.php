@@ -5,7 +5,6 @@
 <script src="JS/scripts.js"></script>
 </header>
 
-	<!Need to include a scenario where the account info shows up if someone continues as a guest, or make the account button disable under those conditions. Just make a guest check>
 <center>
 <body class = "mainBody" onload="getUser()">
 <table class = "mainTable">
