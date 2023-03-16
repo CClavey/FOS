@@ -13,7 +13,7 @@
 			</tr>
 			<tr>
 				<td>Enter your Password</td>
-				<td><input type="text" name="pwd" id="pwd" value = ""/><a id="pwdReset" href="#">Forgot Your Password?</a></td>
+				<td><input type="password" name="pwd" id="pwd" value = ""/><a id="pwdReset" href="#">Forgot Your Password?</a></td>
 			</tr>
 			<tr style="height:40px;">
 				<td align="center"><button name = "reset" id = "reset" onclick = "reset()">Reset</button></td>
