@@ -9,7 +9,7 @@
 		<table border="1" align="center">
 			<tr>
 				<td>Enter your Email ID</td>
-				<td><input type="text" name="emailID" id="emailID" value = ""/></td>
+				<td><label for="email"></label> <input type="email" id="emailID" name="emailID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td>
 			</tr>
 			<tr>
 				<td>Enter your Password</td>
@@ -22,7 +22,7 @@
 		</table>
 		<?php
 			if($_GET['login'] == 'fail')
-				echo "<center>Email ID or password incorrect, try agian</center>";
+				echo "<center>Email ID or password incorrect, try again</center>";
 		?>
 	</form>
 
