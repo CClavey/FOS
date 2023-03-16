@@ -24,7 +24,7 @@
 					<h4>State&ensp;&ensp;&ensp;<select id = "state" name = "state" value = "state">
 					<option value = "Arkansas">Arkansas</option>
 					</select></h4>
-					<h4>Siloam Springs&ensp;&ensp;&ensp;<select id = "city" name = "city" value = "city">
+					<h4>City&ensp;&ensp;&ensp;<select id = "city" name = "city" value = "city">
 					<option value = "Siloam Springs">Siloam Springs</option>
 					</select></h4>
 					<h4>Zip Code&ensp;&ensp;&ensp;<input type="text" name="zip" id="ip" value = ""/></h4>
