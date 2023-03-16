@@ -2,7 +2,7 @@
 <header>
 <?php include ("header.php") ?>
 <link rel="stylesheet" href="CSS/styles.css">
-<script src="scripts.js"></script>
+<script src="JS/scripts.js"></script>
 </header>
 
 <body class = "mainBody">
@@ -25,7 +25,7 @@
 							<option value = "Complaint">Complaint</option>
 							<option value = "Customer Support">Customer Support</option>
 						</select></h4>
-						<h4>Feedback&ensp;&ensp;&ensp;<input type="textarea" name="feedback" id="feedback" value = ""/></h4>
+						<h4>Feedback&ensp;&ensp;&ensp;<input type="text" style="width:200px;height:300px;" name="feedback" id="feedback" value = ""/></h4>
 						&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<input type="submit" value="Submit">
 					</td>
 				</tr>
