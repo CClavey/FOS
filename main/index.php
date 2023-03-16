@@ -9,7 +9,12 @@
 		<br>
 		<br>
 		<br>
-		<a href = "home.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;" name = "guest" id = "guest">Continue as a Guest</button></a>
+		<a href = "home.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;" name = "guest" id = "guest" onclick="guest()">Continue as a Guest</button></a>
+		<script>
+			function guest(){
+				localStorage.setItem('email', 'guest');
+			}
+		</script>
 	</center>
 	
 </header>
