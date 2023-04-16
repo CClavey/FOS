@@ -2,47 +2,50 @@
 <header>
 <?php include ("header.php") ?>
 <?php include ("orderHeader.php")?>
+<?php include ("fos-db-connection.php")?>
 <link rel="stylesheet" href="CSS/styles.css">
 <script src="scripts.js"></script>
 </header>
 
 <body class = "mainBody">
-<!<?php
-		//Rough starter code for printing out the entire menu with each item being their own button
-		/*$sql1="SELECT * FROM books_tab";
+<?php
+		$sql1="SELECT * FROM pizzas_tab";
         $result1=$connect->query($sql1);
-		$count = 1;
-		$total = 1;
+		$sql2="SELECT * FROM extras_tab";
+        $result2=$connect->query($sql2);
 		echo "<center>";
 		echo "<table>";
-		echo "<tr>";
         while($row1 = $result1->fetch_assoc())
 		{
-				$row1['Book_Title'];
-				$row1['Price'];
-				$image_Path1 = "Images/" . $row1['Cover_Pic'];
-				echo "<td align  = center>";
+			echo "<tr>";
+			$row1['dishName'];
+			$row1['price'];
+			$image_Path1 = "Images/" . $row1['image'];
+			$topping1 = $row1['topping1'];
+			$topping2 = $row1['topping2'];
+			echo "<td align  = center>";
 			?>
-			<a href = "javascript:void(0)" onclick = "popupfunction(<?php echo $total ?>)" class=linktext>
-			<img src="<?php echo $image_Path1;?>" height = "200px" width="150px" /><br><?php echo $row1['Book_Title']; ?>
-			</a>
-			<div id="popup<?php echo $total?>" class="white_content">
-			<p align=center><br><br>
-			<img src="<?php echo $image_Path1;?>" height = "200px" width="150px" /><br><?php echo $row1['Book_Title']; ?><br><br><?php echo $row1['Author_Name']; ?><br>$<?php echo $row1['Price']; ?><br><?php echo $row1['Publisher']; ?><br><?php echo $row1['Edition_No']; ?><br><?php echo $row1['Publication_Year']; ?><br><?php echo $row1['Description']; ?><br><br><button type="button" onclick = "addToCart('<?php echo $row1['Book_Title'], ": $", $row1['Price']; ?>')">Add to Cart!</button><br><br>
-			<a href = "javascript:void(0)" onclick = "popupclose(<?php echo $total ?>)" class=linktext>Close</a>
-			</p>
-			</div>
-			<div id="fade<?php echo $total?>" class="black_content"></div></td>
+				<div class = "box" style = "width: 300px;font-size: 18px;" ><img src="<?php echo $image_Path1;?>"/><?php echo $row1['dishName'];?><br>
+				<?php echo "$" . $row1['price']?><br><?php echo $row1['topping1']?><br><?php echo $row1['topping2']?>
+				</div>
 			<?php
-			$count++;
-			$total++;
-			if($count == 6)
-			{
-				echo "</tr><tr>";
-				$count == 1;
-			}
+			echo "</tr>";
 		}
-		echo "<table>";*/
-	?>>
+		while($row2 = $result2->fetch_assoc())
+		{
+			echo "<tr>";
+			$row2['extraName'];
+			$row2['extraPrice'];
+			$image_Path2 = "Images/" . $row2['eImage'];
+			echo "<td align  = center>";
+			?>
+				<div class = "box" style = "width: 300px;font-size: 18px;"><img src="<?php echo $image_Path2;?>" /><?php echo $row2['extraName'];?><br>
+				<?php echo "$" . $row2['extraPrice']?>
+				</div>
+			<?php
+			echo "</tr>";
+		}
+		echo "<table>";
+	?>
 </body>
 </html>
