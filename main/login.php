@@ -1,10 +1,9 @@
 <html>
 <header>
-	<?php include ("header.php") ?>
 	<link rel="stylesheet" href="CSS/styles.css">
 	<script src="JS/scripts.js"></script>
 </header>
-<body>
+<body class = "mainBody">
 	<form name="login-form" method="POST" action="loginProcess.php" >
 		<table border="1" align="center">
 			<tr>
@@ -29,4 +28,5 @@
 </body>
 
 </html>
+
 
