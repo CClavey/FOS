@@ -1,13 +1,11 @@
 <html>
 <header>
 <?php include ("header.php") ?>
-<?php //Turn menu into its own page and then include it into the order to save time?>
-<!Add a cool updating delivery status bar on a timer if possible>
 <link rel="stylesheet" href="CSS/styles.css">
 <script src="scripts.js"></script>
 </header>
 <center>
-<button style="width: 200px; height: 65px; font-size: 24px;" name = "delivery" id = "delivery">Delivery</button>&ensp;&ensp;&ensp;&ensp;&ensp;<button style="width: 200px; height: 65px; font-size: 24px;" name = "pickup" id = "pickup">Pickup</button>
+<a href = "delivery.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;background-color: #ff6347;" name = "delivery" id = "delivery">Delivery</button></a>&ensp;&ensp;&ensp;&ensp;&ensp;<a href = "orderProcess.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;background-color: #ff6347;" name = "pickup" id = "pickup">Pickup</button></a>
 </center>
 <br><br><br>
 
