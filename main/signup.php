@@ -1,10 +1,9 @@
 <html>
 <header>
-	<?php include ("header.php") ?>
 	<link rel="stylesheet" href="CSS/styles.css">
 	<script src="JS/scripts.js"></script>
 </header>
-<body>
+<body class = "mainBody">
 <form name="signup-form" method="POST" action="signupProcess.php" >
 	<table border="1" align="center" width="15%">
 	<tr>
