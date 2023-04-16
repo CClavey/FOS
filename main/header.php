@@ -13,7 +13,7 @@
 		<li class="menu-item"><a href="menu.php" class="drp">Menu</a>
 		</li>
 		
-		<li class="menu-item"><a href="rewards.php" class="drp">Rewards</a>
+		<li class="menu-item"><a href="deals.php" class="drp">Deals</a>
 		</li>
 		
 		<li class="menu-item"><a href="order.php" class="drp">Order</a>
