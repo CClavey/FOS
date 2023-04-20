@@ -157,3 +157,20 @@ a:hover
 {
 	background-color: #eae2b7;
 }
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #c9bd8a;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.box img {
+    display: inline-block;
+    height: 90px;
+    width: 110px;
+    margin-right: 10px;
+}

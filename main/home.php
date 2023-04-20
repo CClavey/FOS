@@ -67,7 +67,6 @@
 					<p>Welcome to our food ordering website! Here you can order delicious meals from the comfort of your home.</p>
 					<h2>Contact Us</h2>
 					<p>Phone: 555-555-5555<br>Email: info@foodordering.com</p>
-					<!Implement the contact form from the Prime booking project??>
 				</td>
 			</tr>
 		</table>
