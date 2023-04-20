@@ -14,7 +14,7 @@
 		<div id="mycart" class="cartcount"></div>
 	</div>
 	<center>
-		<br><br><a href = "checkout.php" class ="drp"><button type="button">Checkout</button></a><br><br>
+		<br><br><a href = "checkout.php" class ="drp"><button style="background-color: #ff6347;" type="button">Checkout</button></a><br><br>
 		<a href = "javascript:void(0)" onclick = "popupclose(<?php echo $cartFunction?>)" class=linktext><br>Close</a>
 	</center>
 	</p>
