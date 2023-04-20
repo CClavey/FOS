@@ -36,7 +36,6 @@
 							<h3>Email: ".$emailID."</h3>
 							<h3>Birthday: ".$row['dob']."</h3>
 							<h3>Gender: ".$row['gender']."</h3>
-							<h3>Points? (Only included if we do points rather than coupons)</h3>
 							<br>";
 					?>
 	</td>
@@ -46,7 +45,6 @@
 		<h3>Update Email: <input type = "text" name = "updateEmail" id = "updateEmail"/></h3>
 		<h3>Update Phone Number: <input type = "text" name = "updatePhone" id = "updatePhone"/></h3>
 		<h3>Update Birthday: <input type = "date" name = "updateBirthday" id = "updateBirthday"/></h3>
-		<h3>Update Payment Method: <input type = "text" name = "updatePay" id = "updatePay"/></h3>
 		<h3>Update Info: <a href = "detailsProcess.php" class ="drp"><button name = "update" id = "update">Update</button></a>
 	</td>
 </tr>
