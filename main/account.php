@@ -31,7 +31,6 @@
 							<h3>Email: ".$emailID."</h3>
 							<h3>Birthday: ".$row['dob']."</h3>
 							<h3>Gender: ".$row['gender']."</h3>
-							<h3>Points? (Only included if we do points rather than coupons)</h3>
 							<br>";
 					?>
 					<center>
