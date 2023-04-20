@@ -27,6 +27,14 @@ function passwordCheck()
 	}
 }
 
+function addToCart(x)
+{
+	alert("Item Successfully Added to Cart...");
+	var itemDiv = document.createElement("div");
+	itemDiv.innerText = x;
+	document.getElementById("mycart").appendChild(itemDiv);
+}
+
 function reset()
 {
 	document.getElementById("firstname").value = "";
