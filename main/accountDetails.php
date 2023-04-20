@@ -25,7 +25,6 @@
 		<h3>Email: ClaveyC@jbu.edu</h3>
 		<h3>Phone Number: </h3>
 		<h3>Birthday: </h3>
-		<h3>Payment Method: **********78</h3>
 	</td>
 	<td colspan="2" class = "tdMain">
 		<h1>Update Details</h1>
@@ -34,7 +33,6 @@
 		<h3>Update Email: <input type = "text" name = "updateEmail" id = "updateEmail"/></h3>
 		<h3>Update Phone Number: <input type = "text" name = "updatePhone" id = "updatePhone"/></h3>
 		<h3>Update Birthday: <input type = "date" name = "updateBirthday" id = "updateBirthday"/></h3>
-		<h3>Update Payment Method: <input type = "text" name = "updatePay" id = "updatePay"/></h3>
 		<h3>Update Info: <a href = "detailsProcess.php" class ="drp"><button name = "update" id = "update">Update</button></a>
 	</td>
 </tr>
