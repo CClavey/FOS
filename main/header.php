@@ -1,5 +1,6 @@
 <html>
 <header>
+<?php session_start() ?>
 <link rel = "styleSheet" href = "CSS/styles.css">
 <script src = "JS/scripts.js">
 </script>

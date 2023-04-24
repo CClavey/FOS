@@ -7,7 +7,7 @@
 
 <body class = "mainBody">
 	<center>
-		<form name="checkout-form" method="POST" action="checkoutProcess.php">
+		<form name="checkout-form" method="POST" action="checkoutProcess.php" onsubmit = "return writeHidden()">
 			<table class="mainTable">
 				<tr>
 					<td colspan="2">
@@ -28,10 +28,13 @@
 						<h4>City&ensp;&ensp;&ensp;<select id = "city" name = "city" value = "city">
 						<option value = "Siloam Springs">Siloam Springs</option>
 						</select></h4>
-						<h4>Zip Code&ensp;&ensp;&ensp;<input type="text" name="zip" id="zip" value = ""/></h4>
+						<h4>Zip Code&ensp;&ensp;&ensp;<input type="text" name="zip" id="zip" maxlength="5" value = ""/></h4>
 						<h4>Card Number&ensp;&ensp;&ensp;<input type="tel" name = "card" id = "card" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"></h4>
 						<h4>Expiration&ensp;&ensp;&ensp;<input type="date" name="exp" id="exp" value = ""/></h4>
-						<h4>CVC&ensp;&ensp;&ensp;<input type="text" name="cvc" id="cvc" value = ""/></h4>
+						<h4>CVC&ensp;&ensp;&ensp;<input type="text" name="cvc" id="cvc" maxlength="3" value = ""/></h4>
+						<input type="hidden" name="cartContents" id = "cartContents" value="" />
+						<input type = "hidden" name = "totalHidden" id = "totalHidden" value = ""/>
+						<input type = "hidden" name = "instructsHidden" id = "instructsHidden" value = ""/>
 						<h4>Checkout&ensp;&ensp;&ensp;<input type="submit" value="Submit"></h4>
 					</td>
 				</tr>

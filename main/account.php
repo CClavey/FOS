@@ -34,7 +34,7 @@
 							<br>";
 					?>
 					<center>
-						<a href = "accountDetails.php" class = "drp"><button name = "editDetails" id = "editDetails">Edit Account Info</button></a>
+						<a href = "accountDetails.php" class = "drp"><button style = "background-color: #ff6347;" name = "editDetails" id = "editDetails">Edit Account Info</button></a>
 					</center>
 					<br>
 				</td>

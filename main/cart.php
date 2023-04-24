@@ -3,7 +3,7 @@
 <script src = "JS/scripts.js">
 </script>
 <link rel = "styleSheet" href = "CSS/styles.css">
-<header>
+<body>
 	<center>
 <a href = "javascript:void(0)" onclick = "popupfunction(<?php echo $cartFunction?>);" class=linktext>
 		<img class="cart1" src="Images/cart.png" height = "45px" width = "50px"/>
@@ -14,14 +14,19 @@
 		<div id="mycart" class="cartcount"></div>
 	</div>
 	<center>
-		<br><br><a href = "checkout.php" class ="drp"><button style="background-color: #ff6347;" type="button">Checkout</button></a><br><br>
+		<br><br><input type = "text" name = "total" id = "total" value = "0" readonly/>
+		<br><br><a href = "checkout.php" class ="drp"><button style="background-color: #ff6347;" type="button">Checkout</button></a>
+		<br><button style="background-color: #ff6347;" type="button" onclick = "clearCart(); popupclose(<?php echo $cartFunction?>);">Clear Cart</button>
 		<a href = "javascript:void(0)" onclick = "popupclose(<?php echo $cartFunction?>)" class=linktext><br>Close</a>
+		<script>
+			writeCart();
+		</script>
 	</center>
 	</p>
 	</div>
 	<div id="fade<?php echo $cartFunction?>" class="black_content"></div>
 	</div>
 	</center>
-</header>
+</body>
 </head>
 </html>

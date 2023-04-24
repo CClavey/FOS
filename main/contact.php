@@ -26,7 +26,7 @@
 							<option value = "Customer Support">Customer Support</option>
 						</select></h4>
 						<h4>Feedback&ensp;&ensp;&ensp;<textarea style="width:150px;height:100px;" name="feedback" id="feedback" value = ""></textarea></h4>
-						&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<input type="submit" name = "Submit" id = "Submit" value="Submit">
+						&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<input type="submit" style = "background-color: #ff6347;" name = "Submit" id = "Submit" value="Submit">
 					</td>
 				</tr>
 				<tr>

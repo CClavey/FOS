@@ -45,7 +45,7 @@
 		<h3>Update Email: <input type = "text" name = "updateEmail" id = "updateEmail"/></h3>
 		<h3>Update Phone Number: <input type = "text" name = "updatePhone" id = "updatePhone"/></h3>
 		<h3>Update Birthday: <input type = "date" name = "updateBirthday" id = "updateBirthday"/></h3>
-		<h3>Update Info: <a href = "detailsProcess.php" class ="drp"><button name = "update" id = "update">Update</button></a>
+		<h3>Update Info: <a href = "detailsProcess.php" class ="drp"><button style = "background-color: #ff6347;" name = "update" id = "update">Update</button></a>
 	</td>
 </tr>
 </table>

@@ -174,3 +174,53 @@ a:hover
     width: 110px;
     margin-right: 10px;
 }
+
+.disabled {
+	opacity: 0.5;
+	filter: grayscale(100%); 
+}
+.white_contentOrder
+{
+	position:absolute;
+	top:65px;
+	left: calc(50% - 540px);
+	width:1080px;
+	height:1120px;
+	background-color:#eae2b7;
+	display:none;
+	z-index:1000;
+}
+
+.white_contentOrder a.linktext 
+{
+    font-size: 1.0rem;
+}
+
+.white_contentOrder button[type="button"] {
+    font-size: 1.0rem;
+    padding: 12px 20px;
+}
+
+#total {
+  border: none;
+  background-color: transparent;
+  width: 100px;
+  font-size: 14px;
+  text-algin: center;
+}
+
+#contents {
+  border: none;
+  background-color: transparent;
+  width: 100px;
+  font-size: 14px;
+  text-algin: center;
+}
+
+textarea {
+  resize: none;
+}
+
+cartDiv {
+      white-space: pre-wrap;
+  }
