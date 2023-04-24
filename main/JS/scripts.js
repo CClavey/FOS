@@ -43,25 +43,26 @@ function addToCart(x)
     var totalPrice = parseFloat(sessionStorage.getItem("totalPrice")) || 0;
     var cartContents = sessionStorage.getItem("cartContents") || "";
     totalPrice += addPrice;
+	//tempContents = name + ": " + price + " (" + toppings + ")";
     cartContents += toAdd + "\n";
     sessionStorage.setItem("totalPrice", totalPrice);
     sessionStorage.setItem("cartContents", cartContents);
 	alert("Item Successfully Added to Cart...");
-
-}
-
-function updateCart(x)
-{
-	
+	writeCart();
 }
 
 function writeCart()
 {
 	//If cartContents is "" then disable the cart button
+	//Store cart contents in a temp, clear the contents, then add the temp back in.
 	var totalPrice = sessionStorage.getItem("totalPrice");
     var cartContents = sessionStorage.getItem("cartContents");
+	//var temp = cartContents;
+	//cartContents = "";
+	document.getElementById("mycart").innerHTML = "";
 	var itemDiv = document.createElement("div");
 	itemDiv.innerText = cartContents;
+	//itemDiv.innerText = temp;
 	document.getElementById("mycart").appendChild(itemDiv);
     document.getElementById("total").value = "Total Price: " + "$" + totalPrice;
 }
@@ -92,16 +93,18 @@ function addToCartStatic(x)
     var totalPrice = parseFloat(sessionStorage.getItem("totalPrice")) || 0;
     var cartContents = sessionStorage.getItem("cartContents") || "";
     totalPrice += addPrice;
-    cartContents += name + "\n";
+    cartContents += name + ": $" + price + "\n";
     sessionStorage.setItem("totalPrice", totalPrice);
     sessionStorage.setItem("cartContents", cartContents);
 	alert("Item Successfully Added to Cart...");
+	writeCart();
 }
 
 function clearCart()
 {
 	sessionStorage.setItem("totalPrice", 0);
     sessionStorage.setItem("cartContents", "");
+	writeCart();
 }
 
 function reset()

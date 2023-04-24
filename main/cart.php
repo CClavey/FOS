@@ -14,7 +14,7 @@
 		<div id="mycart" class="cartcount"></div>
 	</div>
 	<center>
-		<br><br><input type = "text" name = "total" id = "total" value = "0" readonly/>
+		<br><br><input type = "text" name = "total" id = "total" value = "Cart is empty!" readonly/>
 		<br><br><a href = "checkout.php" class ="drp"><button style="background-color: #ff6347;" type="button">Checkout</button></a>
 		<br><button style="background-color: #ff6347;" type="button" onclick = "clearCart(); popupclose(<?php echo $cartFunction?>);">Clear Cart</button>
 		<a href = "javascript:void(0)" onclick = "popupclose(<?php echo $cartFunction?>)" class=linktext><br>Close</a>
