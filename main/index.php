@@ -1,5 +1,10 @@
 <html>
 <head>
+<?php
+session_start();
+if(isset($_SESSION['emailID']))
+	session_destroy();
+?>
 	<link rel="stylesheet" href="CSS/styles.css">
 	<script src="JS/scripts.js"></script>
 </head>
