@@ -15,7 +15,7 @@
 				<td><input type="password" name="pwd" id="pwd" value = ""/><a id="pwdReset" href="#">Forgot Your Password?</a></td>
 			</tr>
 			<tr style="height:40px;">
-				<td align="center"><button name = "reset" id = "reset" onclick = "reset()">Reset</button></td>
+				<td align="center"></td>
 				<td align="center"><input type="submit" value="Login"></td>
 			</tr>
 		</table>
