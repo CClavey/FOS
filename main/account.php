@@ -6,7 +6,7 @@
 </header>
 
 <center>
-<body class = "mainBody" onload="getUser()">
+<body class = "mainBody">
 <table class = "mainTable">
 <tr>
 				<td colspan="2">
@@ -21,7 +21,7 @@
 					<?php
 						include("fos-db-connection.php");
 
-						$emailID = $_GET['user'];
+						$emailID = $_SESSION['emailID'];
 
 						$sql = "SELECT * FROM users_tab WHERE emailID = '".$emailID."'"; //this is susceptible to SQL injection, but i forgot how to do safe queries
 						$result = $connect->query($sql);
