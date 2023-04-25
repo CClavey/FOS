@@ -7,8 +7,6 @@
 
 <body>
 <center>
-	<a href = "home.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;" name = "return" id = "return">Homepage</button></a>
-	
 	<?php
 		include("fos-db-connection.php");
 
@@ -27,7 +25,9 @@
 		if($result == FALSE){
 			echo "error:".$connect->error;
 		} else {
-			echo "<br><br><br><center>Account successfully updated</center>";
+			?>
+			<?php
+			header('Location: account.php');
 			$_SESSION['emailID'] = $emailID;
 		}
 	?>

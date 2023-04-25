@@ -235,4 +235,3 @@ function clearPopup(x)
 	document.getElementById("sizePrice" + x).value = "";
 	document.getElementById("top2" + x).value = "";
 }
-

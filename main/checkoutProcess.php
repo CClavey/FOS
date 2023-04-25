@@ -9,8 +9,6 @@
 
 <body>
 <center>
-	<a href = "home.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;" name = "return" id = "return" onclick = "clearCart();">Homepage</button></a>
-
 	<?php
 		include("fos-db-connection.php");
 
@@ -36,7 +34,9 @@
 		if(($result == FALSE) || ($result2 == FALSE)){
 			echo "error:".$connect->error;
 		} else {
-			echo "<br><br><br>Order Successfully added";
+			?>
+			<?php
+			header('Location: home.php');
 			?>
 			<script>
 				window.onload = clearCart();
