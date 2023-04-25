@@ -9,7 +9,7 @@
 
 <body>
 <center>
-	<a href = "home.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;" name = "return" id = "return">Return</button></a>
+	<a href = "home.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;" name = "return" id = "return">Homepage</button></a>
 
 	<?php
 		include("fos-db-connection.php");
@@ -18,7 +18,7 @@
 		$phoneNum = $_POST['phoneNum'];
 		$feedback = $_POST['feedback'];
 
-		$sql = "INSERT INTO feedback_tab (sid, emailID, phoneNum, feedback) 
+		$sql = "INSERT INTO feedback_tab (sID, emailID, phoneNum, feedback) 
 				VALUES (NULL, '$emailID', '$phoneNum', '$feedback')";
 		$result = $connect->query($sql);
 
