@@ -9,7 +9,7 @@
 
 <body>
 <center>
-	<a href = "home.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;" name = "return" id = "return" onclick = "clearCart();">Return</button></a>
+	<a href = "home.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;" name = "return" id = "return" onclick = "clearCart();">Homepage</button></a>
 
 	<?php
 		include("fos-db-connection.php");
