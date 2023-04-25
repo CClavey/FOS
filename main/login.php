@@ -12,7 +12,7 @@
 			</tr>
 			<tr>
 				<td>Enter your Password</td>
-				<td><input type="password" name="pwd" id="pwd" value = ""/><a id="pwdReset" href="#">Forgot Your Password?</a></td>
+				<td><input type="password" name="pwd" id="pwd" value = ""/></td>
 			</tr>
 			<tr style="height:40px;">
 				<td align="center"></td>
