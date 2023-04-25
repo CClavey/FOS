@@ -25,7 +25,7 @@
 		
 		<?php
 		if(!isset($_SESSION['emailID'])) {
-			echo "	<li class='menu-item'><a href='signup.php' class='drp'>Signup</a>
+			echo "	<li class='menu-item'><a href='index.php' class='drp'>Signup/Login</a>
 					</li>
 		
 					<li class='menu-item'>";
