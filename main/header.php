@@ -23,16 +23,28 @@
 		<li class="menu-item"><a href="contact.php" class="drp">Contact Us</a>
 		</li>
 		
-		<li class="menu-item"><a href="#" id="target" onclick="setUser()" class="drp">Account</a>
-		</li>
-		<script>
-			function setUser() {
-				document.getElementById('target').href = "account.php?user=" + localStorage.getItem('email');
-			}
-		</script>
+		<?php
+		if(!isset($_SESSION['emailID'])) {
+			echo "	<li class='menu-item'><a href='signup.php' class='drp'>Signup</a>
+					</li>
 		
-		<li class="menu-item"><?php include ("cart.php");?>
-		</li>
+					<li class='menu-item'>";
+					include('cart.php');
+					
+			echo "	</li>";
+		} else {
+			echo "	<li class='menu-item'><a href='account.php' class='drp'>Account</a>
+					</li>
+					
+					<li class='menu-item'>";
+					include('cart.php');
+					
+			echo "	</li>	
+		
+					<li class='menu-item'><a href='index.php' class='drp'>Logout<img src = 'Images/logout.png' height = '20px' width = '20px'></a>
+					</li>";
+		}
+		?>
 	</ul>
 </center>
 </header>
