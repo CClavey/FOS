@@ -6,9 +6,10 @@
 
 <body class = "mainBody">
 <center>
-	<a href = "home.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;" name = "return" id = "return">Return</button></a>
+	<a href = "home.php" class = "drp"><button style="width: 200px; height: 65px; font-size: 24px;" name = "return" id = "return">Homepage</button></a>
 
 	<?php
+		session_start();
 		include("fos-db-connection.php");
 
 		$emailID = $_POST['emailID'];
@@ -25,10 +26,8 @@
 		if($result == FALSE){
 			echo "error:".$connect->error;
 		} else {
-			echo "<br><br><br><center>User successfully added</center>
-			<script>
-			localStorage.setItem('email', '".$emailID."');
-			</script>";
+			echo "<br><br><br><center>User successfully added</center>";
+			$_SESSION['emailID'] = $emailID;
 		}
 	?>
 
