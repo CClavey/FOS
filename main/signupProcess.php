@@ -25,8 +25,11 @@
 			echo "error:".$connect->error;
 		} else {
 			?>
+			<script>
+				alert("Account Created!");
+				window.location.href = "index.php";
+			</script>
 			<?php
-			header('Location: index.php');
 			$_SESSION['emailID'] = $emailID;
 		}
 	?>

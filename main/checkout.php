@@ -6,9 +6,10 @@
 </header>
 
 <body class = "mainBody">
-	<center>
+<center>
+<div class = "boxCheckout">
 		<form name="checkout-form" method="POST" action="checkoutProcess.php" onsubmit = "return writeHidden()">
-			<table class="mainTable">
+			<table>
 				<tr>
 					<td colspan="2">
 						<hr>
@@ -35,7 +36,7 @@
 						<input type="hidden" name="cartContents" id = "cartContents" value="" />
 						<input type = "hidden" name = "totalHidden" id = "totalHidden" value = ""/>
 						<input type = "hidden" name = "instructsHidden" id = "instructsHidden" value = ""/>
-						<h4>Checkout&ensp;&ensp;&ensp;<input type="submit" value="Submit"></h4>
+						<h4>Checkout&ensp;&ensp;&ensp;<input type="submit" style = "background-color: #ff6347;" value="Submit"></h4>
 					</td>
 				</tr>
 				<tr>
@@ -45,7 +46,8 @@
 				</tr>
 			</table>
 		</form>
-	</center>
+</div>
+</center>
 </body>
 
 </html>

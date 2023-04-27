@@ -7,8 +7,9 @@
 
 <body class = "mainBody">
 	<center>
+	<div class = "boxContact">
 		<form name="contact-form" method="POST" action="contactProcess.php">
-			<table class="mainTable">
+			<table>
 				<tr>
 					<td colspan="2">
 						<hr>
@@ -36,6 +37,7 @@
 				</tr>
 			</table>
 		</form>
+	</div>
 	</center>
 </body>
 

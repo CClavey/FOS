@@ -224,3 +224,100 @@ textarea {
 cartDiv {
       white-space: pre-wrap;
   }
+  
+.boxMain {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	background-color: #c9bd8a;
+	padding: 20px;
+	margin: 10px;
+	box-shadow: 5px 5px 5px grey;
+	max-width: 755px;
+}
+
+.boxMain img {
+	display: inline-block;
+	height: 130px;
+	width: 190px;
+	margin-right: 10px;
+}
+
+.boxContact {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	background-color: #c9bd8a;
+	padding: 20px;
+	margin: 10px;
+	box-shadow: 5px 5px 5px grey;
+	max-width: 371px;
+}
+
+.boxLogin {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	background-color: #c9bd8a;
+	padding: 20px;
+	margin: 10px;
+	box-shadow: 5px 5px 5px grey;
+	max-width: 330px;
+}
+
+.boxSignup {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	background-color: #c9bd8a;
+	padding: 20px;
+	margin: 10px;
+	box-shadow: 5px 5px 5px grey;
+	max-width: 315px;
+}
+
+.boxCheckout {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	background-color: #c9bd8a;
+	padding: 20px;
+	margin: 10px;
+	box-shadow: 5px 5px 5px grey;
+	max-width: 371px;
+}
+
+.boxAccount {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	background-color: #c9bd8a;
+	padding: 20px;
+	margin: 10px;
+	box-shadow: 5px 5px 5px grey;
+	max-width: 285px;
+}
+
+.boxDetails {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	background-color: #c9bd8a;
+	padding: 20px;
+	margin: 10px;
+	box-shadow: 5px 5px 5px grey;
+	max-width: 690px;
+}
+
+.boxDeliver {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	background-color: #c9bd8a;
+	padding: 20px;
+	margin: 10px;
+	box-shadow: 5px 5px 5px grey;
+	max-width: 369px;
+}
+
+

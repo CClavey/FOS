@@ -6,8 +6,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </header>
 <body class = "mainBody">
-
-<div ng-app="myApp" ng-controller="myCtrl">
+<center>
+<div class = "boxSignup" ng-app="myApp" ng-controller="myCtrl">
 	<form name="signup-form" method="POST" action="signupProcess.php" >
 		<table border="1" align="center" width="15%">
 		<tr>
@@ -41,11 +41,12 @@
 		</tr>
 		<tr style="height:40px;">
 			<td align="center"></td>
-			<td align='center'><input type='submit' id="submit" value='Signup'/></td>
+			<td align='center'><input type='submit' style = "background-color: #ff6347;" id="submit" value='Signup'/></td>
 		</tr>
 		</table>
 	</form>
 </div>
+</center>
 <script>
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {

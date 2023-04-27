@@ -4,6 +4,8 @@
 	<script src="JS/scripts.js"></script>
 </header>
 <body class = "mainBody">
+<center>
+<div class = "boxLogin">
 	<form name="login-form" method="POST" action="loginProcess.php" >
 		<table border="1" align="center">
 			<tr>
@@ -16,7 +18,7 @@
 			</tr>
 			<tr style="height:40px;">
 				<td align="center"></td>
-				<td align="center"><input type="submit" value="Login"></td>
+				<td align="center"><input type="submit" style = "background-color: #ff6347;" value="Login"></td>
 			</tr>
 		</table>
 		<?php
@@ -24,7 +26,8 @@
 				echo "<center>Email ID or password incorrect, try again</center>";
 		?>
 	</form>
-
+</div>
+</center>
 </body>
 
 </html>

@@ -2,7 +2,6 @@
 <header>
 <?php include ("header.php") ?>
 <?php include ("fos-db-connection.php")?>
-<!-- MAKE SURE THE CART BUTTON HAS A UNIQUE TOTAL VALUE AND THEN CLEAR THE ITEMS INSIDE THE POPUP IN CASE A USER GOES BACK TO IT -->
 <link rel="stylesheet" href="CSS/styles.css">
 <script src="scripts.js"></script>
 <center><div class = "box" style = "width: 250px;font-size: 16px;"><h3>Pizza Prices based on medium sizes.</h3></div></center>

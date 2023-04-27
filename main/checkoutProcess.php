@@ -35,11 +35,10 @@
 			echo "error:".$connect->error;
 		} else {
 			?>
-			<?php
-			header('Location: home.php');
-			?>
 			<script>
-				window.onload = clearCart();
+				clearCart();
+				alert("Order Created!");
+				window.location.href = "home.php";
 			</script>
 			<?php
 		}

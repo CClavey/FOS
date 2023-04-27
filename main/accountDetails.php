@@ -10,9 +10,9 @@
 <center>
 <body class = "mainBody">
 
-<div ng-app="myApp" ng-controller="myCtrl">
+<div class = "boxDetails" ng-app="myApp" ng-controller="myCtrl">
 <form name="account-form" method="POST" action="detailsProcess.php" >
-<table class="main-table">
+<table>
 <tr>
 	<td colspan="2">
 		<hr>
@@ -60,6 +60,14 @@
 							</select>
 							<h3><a href = 'detailsProcess.php' class ='drp'><button style = 'background-color: #ff6347' name = 'update' id = 'update'>Update</button></a>";
 	?>
+	</td>
+</tr>
+<tr>
+	<td colspan="2">
+		<hr>
+	</td>
+	<td colspan="2">
+		<hr>
 	</td>
 </tr>
 </table>

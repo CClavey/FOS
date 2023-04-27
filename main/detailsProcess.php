@@ -26,8 +26,11 @@
 			echo "error:".$connect->error;
 		} else {
 			?>
+			<script>
+				alert("Account Updated!");
+				window.location.href = "account.php";
+			</script>
 			<?php
-			header('Location: account.php');
 			$_SESSION['emailID'] = $emailID;
 		}
 	?>

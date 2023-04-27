@@ -79,9 +79,7 @@ function writeHidden()
 
 function writeInstruct(x)
 {
-	
 	sessionStorage.setItem("delInstruct", x);
-	var test = sessionStorage.getItem("delInstruct");
 }
 
 function addToCartStatic(x)

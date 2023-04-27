@@ -1,6 +1,6 @@
 <body>
 <center>
-		<table class="mainTable">
+		<table>
 			<tr>
 				<td colspan="2">
 					<center>
