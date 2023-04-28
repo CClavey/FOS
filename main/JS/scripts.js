@@ -56,6 +56,10 @@ function writeCart()
 	//If cartContents is "" then disable the cart button
 	//Store cart contents in a temp, clear the contents, then add the temp back in.
 	var totalPrice = sessionStorage.getItem("totalPrice");
+	if(totalPrice == null)
+	{
+		totalPrice = 0;
+	}
     var cartContents = sessionStorage.getItem("cartContents");
 	//var temp = cartContents;
 	//cartContents = "";

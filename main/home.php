@@ -62,5 +62,8 @@ include ("orderHeader.php");
 		</table>
 	</div>
 	</center>
+	<script>
+		writeCart();
+	</script>
 </body>
 </html>
