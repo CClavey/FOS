@@ -17,8 +17,8 @@
 		$gender = $_POST['gender'];
 		$dob = $_POST['dob'];
 
-		$sql = "INSERT INTO users_tab (emailID, firstname, lastname, gender, pwd, dob) 
-				VALUES ('$emailID', '$firstname', '$lastname', '$gender', '$pwd', '$dob')";
+		$sql = "INSERT INTO users_tab (sid, emailID, firstname, lastname, gender, pwd, dob) 
+				VALUES (null, '$emailID', '$firstname', '$lastname', '$gender', '$pwd', '$dob')";
 		$result = $connect->query($sql);
 
 		if($result == FALSE){
