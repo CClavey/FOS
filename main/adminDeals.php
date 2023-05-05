@@ -2,38 +2,28 @@
 <header>
 <?php 
 session_start();
-if(!isset($_SESSION['emailID']) || $_SESSION['emailID'] != "fos.admin@gmail.com") {
+if(!isset($_SESSION['emailID']) || $_SESSION['a'] != 'a') {
 	echo "BAD Page. <a href='index.php'>Login</a> again.";
 } else {
 	include ("adminHeader.php");
 	include ("fos-db-connection.php");
-	if (! empty($_POST["upload"])) {
+	if (isset($_POST['upload'])) {
 		if (is_uploaded_file($_FILES['userImage']['tmp_name'])) {
 			$targetPath = "Images/" . $_FILES['userImage']['name'];
 			if (move_uploaded_file($_FILES['userImage']['tmp_name'], $targetPath)) {
 				$uploadedImagePath = $targetPath;
+				$sql1="UPDATE deals_tab SET dImage='".$_FILES['userImage']['name']."' WHERE sID=".$_POST['id'];
+				$result1=$connect->query($sql1);
 			}
 		}
+		$sql1="UPDATE deals_tab SET dealName='".$_POST['dealName']."' WHERE sID=".$_POST['id'];
+		$result1=$connect->query($sql1);
+		$sql1="UPDATE deals_tab SET dealPrice='".$_POST['dealPrice']."' WHERE sID=".$_POST['id'];
+		$result1=$connect->query($sql1);
+		$sql1="UPDATE deals_tab SET contents='".$_POST['contents']."' WHERE sID=".$_POST['id'];
+		$result1=$connect->query($sql1);
 	}
 ?>
-<script type="text/javascript">
-$(document).ready(function(){
-    var size;
-    $('#cropbox').Jcrop({
-      aspectRatio: 1,
-      onSelect: function(c){
-       size = {x:c.x,y:c.y,w:c.w,h:c.h};
-       $("#crop").css("visibility", "visible");     
-      }
-    });
- 
-    $("#crop").click(function(){
-        var img = $("#cropbox").attr('src');
-        $("#cropped_img").show();
-        $("#cropped_img").attr('src','image-crop.php?x='+size.x+'&y='+size.y+'&w='+size.w+'&h='+size.h+'&img='+img);
-    });
-});
-</script>
 	<link rel="stylesheet" href="CSS/styles.css">
 	<script src="scripts.js"></script>
 	</header>
@@ -44,52 +34,38 @@ $(document).ready(function(){
 	</center>
 	<br><br><br><br><br><br>
 	<?php
-			$sql1="SELECT * FROM deals_tab";
-			$result1=$connect->query($sql1);
+			$sql2="SELECT * FROM deals_tab";
+			$result2=$connect->query($sql2);
 			echo "<center>";
 			echo "<table align=center>";
-			while($row1 = $result1->fetch_assoc())
+			while($row2 = $result2->fetch_assoc())
 			{
 				echo "<tr>";
 				echo "<td align  = center>";
-				$imagePath = "Images/" .$row1['dImage'];
+				$imagePath = "Images/" .$row2['dImage'];
 				?>
-						<div class = "box" style = "width: 600px;font-size: 18px;" >
-						<div class="bgColor">
-							<form id="uploadForm" action="" method="post" enctype="multipart/form-data">
-								<div id="uploadFormLayer">
-									<input name="userImage" id="userImage" type="file" class="inputFile"><br>
-									<input type="submit" name="upload" value="Submit" class="btnSubmit">
-								</div>
-							</form>
-						</div>
+				<form id="uploadForm" action="" method="post" enctype="multipart/form-data">
+					<div class = "box" style = "width: 550px;font-size: 18px;" >
 						<div>
+							<input name="userImage" id="userImage" type="file" class="inputFile"><br><br>
 							<img src="<?php echo $imagePath; ?>" id="cropbox" class="img" /><br />
-						</div>
-						<div id="btn">
-							<input type='button' id="crop" value='CROP'>
+							<?php echo $row2['dImage'] ?>
 						</div>
 						<div>
-							<img src="#" id="cropped_img" style="display: none;">
+							Name: <input type="text" style="width:200px;height:25px" name="dealName" value="<?php echo $row2['dealName']?>"/><br>
+							Price: <input type="text" style="width:200px;height:25px" name="dealPrice" value="<?php echo $row2['dealPrice']?>"/><br>
+							Contents: <input type="text" style="width:200px;height:25px" name="contents" value="<?php echo $row2['contents']?>"/><br>
+							<input type="hidden" id="id" name="id" value="<?php echo $row2['sID'] ?>" required>
 						</div>
-					<form id="remove" method="POST" action="">
-						Name: <input type="text" name="dealName" value="<?php echo $row1['dealName']?>"/><br>
-						Price: <input type="text" name="dealPrice" value="<?php echo $row1['dealPrice']?>"/><br>
-						</div>
-						<div class = "box" style = "width: 300px;font-size: 18px;">
-						<button type = "button" style="background-color: #ff6347;" onclick="remove(<?php echo $row1['sID'] ?>)">Apply Changes</button>
-					</form>
 					</div>
-					<script>
-						function remove(i) {
-							document.getElementById("id").value = i;
-							document.getElementById("remove").submit();
-						}
-					</script>
+					<div class = "box" style = "width: 100px;font-size: 18px;">
+						<input type="submit" name="upload" style="background-color:#ff6347;" value="Apply Changes"/>
+					</div>
+				</form>
 				<?php
 				echo "</tr>";
 			}
-			echo "<table>";
+			echo "</table>";
 }
 	?>
 </body>
