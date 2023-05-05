@@ -14,6 +14,9 @@
 		<li class="menu-item"><a href="adminDeals.php" class="drp">Deals</a>
 		</li>
 		
+		<li class="menu-item"><a href="adminFeedback.php" class="drp">Feedback</a>
+		</li>
+		
 		<li class="menu-item"><a href="adminAccount.php" class="drp">Account</a>
 		</li>
 		
