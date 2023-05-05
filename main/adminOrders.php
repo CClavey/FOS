@@ -1,6 +1,10 @@
 <html>
 <header>
 <?php 
+session_start();
+if(!isset($_SESSION['emailID']) || $_SESSION['a'] != 'a') {
+	echo "BAD Page. <a href='index.php'>Login</a> again.";
+} else {
 include ("adminHeader.php");
 include ("fos-db-connection.php");
 if(isset($_POST['id']))
@@ -10,9 +14,11 @@ if(isset($_POST['id']))
 </header>
 
 <body class = "mainBody">
-<h1 align=center>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Open Orders</h1>
-<br><br><br><br><br><br>
-<?php
+	<center>
+		<h1>Open Orders</h1>
+	</center>
+	<br><br><br><br><br><br>
+	<?php
 		$sql1="SELECT * FROM orders_tab";
         $result1=$connect->query($sql1);
 		echo "<center>";
@@ -44,6 +50,7 @@ if(isset($_POST['id']))
 			echo "</tr>";
 		}
 		echo "<table>";
+}
 	?>
 </body>
 </html>
