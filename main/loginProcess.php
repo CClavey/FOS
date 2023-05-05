@@ -13,14 +13,15 @@
 		$emailID = $_POST['emailID'];
 		$password = $_POST['pwd'];
 
-		$sql = "SELECT pwd FROM users_tab WHERE emailID = '".$emailID."'";
+		$sql = "SELECT * FROM users_tab WHERE emailID = '".$emailID."'";
 		$result = $connect->query($sql);
-		$pwd = mysqli_fetch_assoc($result);
+		$row = $result->fetch_assoc();
 
-		if($password == $pwd['pwd']) {
-			if($emailID == "fos.admin@gmail.com")
+		if($password == $row['pwd']) {
+			if($row['sid'] == '2') {
+				$_SESSION['a'] = 'a';
 				header('Location: adminOrders.php');
-			else
+			} else
 				header('Location: home.php');
 			$_SESSION['emailID'] = $emailID;
 		} else {
